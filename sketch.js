@@ -89,12 +89,13 @@ function draw() {
 
     kangaroo.collide(invisibleGround);
     //write a condition for gamestate should end.
-    if(){
+    if(obstaclesGroup.isTouching(kangaroo)){
+    
       collidedSound.play();
       gameState = END;
     }
     //write a condition when the score should increase
-    if(){
+    if(shrubsGroup.isTouching(kangaroo)){
       score = score + 1;
       shrubsGroup.destroyEach();
     }
